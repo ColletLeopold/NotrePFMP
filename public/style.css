@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #0055A4;
+  --secondary-color: #F8F9FA;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --text-color: #2c3e50;
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.app-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.logo-img {
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.status-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: var(--transition);
+  padding: 1.5rem;
+  min-height: 180px;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.status-card .card-header {
+  padding: 1.5rem;
+  background: rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.status-card.success {
+  border-left: 4px solid var(--success-color);
+}
+
+.status-card.error {
+  border-left: 4px solid var(--error-color);
+}
+
+.status-badge {
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.status-badge.complete {
+  background: #e8f5e9;
+  color: var(--success-color);
+}
+
+.status-badge.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  cursor: pointer;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(0,85,164,0.03);
+  transition: var(--transition);
+}
+
+.drop-zone:hover {
+  background: rgba(0,85,164,0.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.1);
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+      font-size: 1.4rem;
+  }
+}
